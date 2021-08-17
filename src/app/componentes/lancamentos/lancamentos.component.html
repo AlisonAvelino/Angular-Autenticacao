@@ -1,12 +1,11 @@
 <br>
 <div class="mask d-flex h-100">
   <div class="container-fluid">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center">     
       <div class="col-12 col-md-10 col-lg-7 col-xl-11">
         <div class="card mask-custom">
           <div class="card-body p-4 text-black">
             <div class="my-4">
-
               <h2 class="text-center">
                 <i class="bi bi-stopwatch-fill"></i>Marcações
               </h2>
@@ -37,7 +36,10 @@
                     </tbody>
                 </table>
                 </div>
-
+                <p>Data e hora: {{ dataHoraAtual }}
+                  <button (click)="atualizarDataHora()">Atualizar data</button>
+                </p>
+                <p>Data e hora tempo real: {{ dataTempoReal }}</p>
           </div>
         </div>
       </div>
