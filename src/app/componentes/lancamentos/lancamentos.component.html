@@ -39,7 +39,15 @@
                 <p>Data e hora: {{ dataHoraAtual }}
                   <button (click)="atualizarDataHora()">Atualizar data</button>
                 </p>
-                <p>Data e hora tempo real: {{ dataTempoReal }}</p>
+                <p>
+                  Data e hora tempo real: {{ dataTempoReal }}
+                </p>
+
+                <p>
+                  <a (click)="downloadCSV()">
+                    <i class="bi-file-earmark-excel"></i>
+                  </a>
+                </p>
           </div>
         </div>
       </div>

@@ -36,10 +36,10 @@ export class LancamentosComponent implements OnInit {
     this.dataHoraAtualSub = this.dataHoraService.dataHora.subscribe(
       dataHora => this.dataHoraAtual = dataHora
     ); 
-    
+
     this.dataTempoRealSub = this.dataHoraService.dataHoraTempoReal.subscribe(
       dataHora => this.dataTempoReal = dataHora
-    );
+    ); 
   }
 
   urlLocalizacao(localizacao: string) {
@@ -48,6 +48,10 @@ export class LancamentosComponent implements OnInit {
 
   atualizarDataHora() {
     this.dataHoraService.atualizarDataHora();
+  }
+
+  downloadCSV() {
+    this.lancamentoService.downloadCSV(this.lancamentos);
   }
 
 
