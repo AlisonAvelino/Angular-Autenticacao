@@ -37,16 +37,24 @@
                 </table>
                 </div>
                 <p>Data e hora: {{ dataHoraAtual }}
-                  <button (click)="atualizarDataHora()">Atualizar data</button>
+                  <button type="button" class="btn btn-outline-primary btn-sm" (click)="atualizarDataHora()">
+                    <i class="bi bi-arrow-clockwise"></i>
+                  </button>
                 </p>
                 <p>
                   Data e hora tempo real: {{ dataTempoReal }}
                 </p>
 
                 <p>
-                  <a (click)="downloadCSV()">
+                  <button type="button" class="btn btn-outline-success btn-sm"(click)="downloadCSV()" 
+                  data-toggle="tooltip" title="CSV">
                     <i class="bi-file-earmark-excel"></i>
-                  </a>
+                  </button>
+                  &nbsp;
+                  <button type="button" class="btn btn-outline-danger btn-sm" (click)="downloadPDF()" 
+                  data-toggle="tooltip" title="PDF">
+                    <i class="bi bi-file-earmark-pdf"></i>
+                  </button>
                 </p>
           </div>
         </div>
